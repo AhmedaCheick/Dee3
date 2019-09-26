@@ -20,7 +20,24 @@ This code takes every circle with class a and turns it red and moves it so that 
 
 Selections can be made by either `d3.select()` for one element, or `d3.selectAll()` for multiple elements.
 <br>
+<br>
 *Binding*
 <br>
-`d3.selectAll("div.class1").data([4,5,61,3])` <br>
+<br>
+```javascript
+d3.selectAll("div.class1").data([4,5,61,3])
+``` 
+<br>
+
 That line **binds** the array [4,5,61,3] to `div` elements with `class1`. A very **critical** thing to understand and remember here, is that those are rarely equal to each other in length. In some cases we have more divs than data points or vice versa.
+<br>
+<br>
+### The DOM
+A web page is structured according to the DOM. It defines a set of nested elements. <br>
+Three categories of information about each **element** determine its behavior and appearance: *styles*, *attributes*, and *properties*.
+
+```javascript
+d3.select("#someDiv").style("border", "5px darkgray dashed");
+d3.select("#someDiv").attr("id", "newID");
+d3.select("#someCheckbox").property("checked", true);
+```
