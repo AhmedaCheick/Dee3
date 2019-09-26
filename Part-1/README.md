@@ -77,4 +77,7 @@ The `transform` attr also accepts a `scale()` so you can change the shape of the
 ```
 
 #### SVG: `<path>` 
-`path` is the area determined by its `d` attribute. The area can be either **open** or **closed** depending the presence of the letter `Z` at the end of the string in the `d` attribute. 
+`path` is the area determined by its `d` attribute. The area can be either **open** or **closed** depending on the presence of the letter `Z` at the end of the string in the `d` attribute. Area is closed if there's `Z`.
+
+### Some CSS
+We have just talked about you can overwrite an entire class name by using `attr()`. But often a class is composed of multiple strings. We can edit those using `classed()`. It allows you to **append** or **remove** a class. <br>
