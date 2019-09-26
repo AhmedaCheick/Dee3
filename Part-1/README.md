@@ -1,0 +1,22 @@
+## Part 1: The Fundamentals
+---
+**D3.js** is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS
+
+D3 provides developers with the ability to create rich interactive and animated content based on data and tie that content to existing web page elements. <br>
+It gives you the tools to create high-performance data dashboards and sophisticated data visualization, and to dynamically update traditional web content.
+
+However, It’s a much longer process than using dedicated charting libraries, but the D3 process is also its **strength**.
+
+### Selecting and Binding
+D3 is all about these two. *Selection* is the grouping of elements, whether graphics or traditional divs. <br>
+<br>
+*Selecting*
+`d3.selectAll("circle.a").style("fill", "red").attr("cx", 100);`
+
+This code takes every circle with class a and turns it red and moves it so that its center is 100 pixels to the right of the left side of our *svg* canvas.
+
+Selections can be made by either `d3.select()` for one element, or `d3.selectAll()` for multiple elements.
+
+*Binding*
+`d3.selectAll("div.class1").data([4,5,61,3])` <br>
+That line **binds** the array [4,5,61,3] to `div` elements with `class1`. A very **critical** thing to understand and remember here, is that those are rarely equal to each other in length. In some cases we have more divs than data points or vice versa.
