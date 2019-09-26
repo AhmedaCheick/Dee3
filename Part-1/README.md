@@ -65,9 +65,16 @@ The `<g></g>` element doesn't exsit as a bounded space. Instead, it's used a log
 <text>This circle’s Label</text>
 </g>
 ```
-#### transform(): An attribute of the `<g>` element
+##### transform(): An attribute of the `<g>` element
 `transform` allows you to move the `<g>` element around your canvas. 
 ```html
 <g transform="translate(100,50)">
 ```
-The *transform* is pretty annoying because it accepts its description in the form of a text string. The line above moves the `<g>` element 100px to the right and 50px down.
+The *transform* is pretty annoying because it accepts its description in the form of a text string. The line above moves the `<g>` element 100px to the right and 50px down. <br>
+The `transform` attr also accepts a `scale()` so you can change the shape of the rendered shape. 
+```html
+<g transform="translate(100,400) scale(2.5)">
+```
+
+#### SVG: `<path>` 
+`path` is the area determined by its `d` attribute. The area can be either **open** or **closed** depending the presence of the letter `Z` at the end of the string in the `d` attribute. 
