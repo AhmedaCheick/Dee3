@@ -77,7 +77,16 @@ The `transform` attr also accepts a `scale()` so you can change the shape of the
 ```
 
 #### SVG: `<path>` 
-`path` is the area determined by its `d` attribute. The area can be either **open** or **closed** depending on the presence of the letter `Z` at the end of the string in the `d` attribute. Area is closed if there's `Z`.
+`path` is the area determined by its `d` attribute. The area can be either **open** or **closed** depending on the presence of the letter `Z` at the end of the string in the `d` attribute. Area is closed if there's `Z`. <br>
+```html
+<path style="fill:none;stroke:gray;stroke-width:4px;"
+     d="M 10,60 40,30 50,50 60,30 70,80" transform="translate(0,0)" />
+```
+And this one below is closed due to the presence of `Z`.
+```html
+<path style="fill:none;stroke:gray;stroke-width:4px;"
+     d="M 10,60 40,30 50,50 60,30 70,80Z" transform="translate(0,200)" />
+```
 
 ### Some CSS
 We have just talked about you can overwrite an entire class name by using `attr()`. But often a class is composed of multiple strings. We can edit those using `classed()`. It allows you to **append** or **remove** a class. <br>
