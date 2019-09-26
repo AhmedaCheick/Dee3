@@ -89,4 +89,17 @@ And this one below is closed due to the presence of `Z`.
 ```
 
 ### Some CSS
-We have just talked about you can overwrite an entire class name by using `attr()`. But often a class is composed of multiple strings. We can edit those using `classed()`. It allows you to **append** or **remove** a class. <br>
+We have showed how you can overwrite an entire class name by using `attr()`. But often a class is composed of multiple strings. We can edit those using `classed()`. It allows you to **append** or **remove** a class. <br>
+```javascript
+d3.select("circle").classed("active", true);
+```
+This line appends a class "active" to the `circle` element.
+
+#### `.data()` 
+You use the function `.data()` to bind **each** element in your selection (`.select()`) to each element in your array. If you have more items in your array than elements on your page, you use `.enter()`. When you have less items in your array than your selection that's when you use `.exit()`. 
+
+#### `transition()` & `delay()`
+`transition` method indicates that you don’t want your change to be instantaneous. By chaining it with the `.delay()` method, you indicate how many milliseconds to wait before implementing the style or attribute changes that appear in the chain after that.
+```javascript
+d3.selectAll("circle").transition().duration(2000).attr("cy", 200);
+```
