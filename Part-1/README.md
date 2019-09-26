@@ -46,3 +46,22 @@ d3.select("#someCheckbox").property("checked", true);
 
 ### SVG
 SVG allows for simple mathematical representation of images. It provides options to draw different shapes such as Lines, Rectangles, Circles, Ellipses, etc. Hence, designing visualizations with SVG gives you more power and flexibility.
+
+```html
+<svg style="width:500px;height:500px;border:1px lightgray solid;">
+</svg>
+```
+An `<svg>` element can be styled with CSS to have differ- ent borders and backgrounds. Or use D3 to style it! 
+
+#### SVG: <text>
+svg allows for text as well as shapes. It's primarily used for **labels**.
+
+#### SVG: <g>
+The `<g></g>` element doesn't exsit as a bounded space. Instead, it's used a logical grouping of elements. Let's say you want a number of shapes to be associated with each other or a shape and its label, you can place them inside a `<g>` element.
+
+```html
+<g>
+<circle r="2"/>
+<text>This circle’s Label</text>
+</g>
+```
