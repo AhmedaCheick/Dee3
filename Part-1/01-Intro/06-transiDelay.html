@@ -10,13 +10,13 @@
 </head>
 
 <body>
-<!-- div to contain the svg -->
+    <!-- div to contain the svg -->
     <div class="vizcontainer">
         <!-- svg canvas -->
         <svg style="width:500px;height:500px;border:1px lightgray solid;">
-            </svg>
+        </svg>
 
-            <!-- js script -->
+        <!-- js script -->
         <script>
             // append a line 
             d3.select("svg")
@@ -32,7 +32,7 @@
                 .append("text")
                 .attr("x", 20)
                 .attr("y", 20)
-                .text("HELLO");
+                .text("I said Hi!");
 
             d3.select("svg")
                 .append("circle")
@@ -52,10 +52,12 @@
                 .append("text")
                 .attr("x", 400)
                 .attr("y", 400)
-                .text("WORLD");
-    
+                .text("What?");
+
 
             d3.selectAll("circle").transition().duration(2000).attr("cy", 200);
+            d3.selectAll("circle").transition().delay(1000).style("opacity", 1);
+            d3.selectAll("circle").transition().delay(3000).style("opacity", .75);
         </script>
 </body>
 
