@@ -11,12 +11,16 @@ However, It’s a much longer process than using dedicated charting libraries, b
 D3 is all about these two. *Selection* is the grouping of elements, whether graphics or traditional divs. <br>
 <br>
 *Selecting*
-`d3.selectAll("circle.a").style("fill", "red").attr("cx", 100);`
+<br>
+```javascript 
+d3.selectAll("circle.a").style("fill", "red").attr("cx", 100);
+```
 
 This code takes every circle with class a and turns it red and moves it so that its center is 100 pixels to the right of the left side of our *svg* canvas.
 
 Selections can be made by either `d3.select()` for one element, or `d3.selectAll()` for multiple elements.
-
+<br>
 *Binding*
+<br>
 `d3.selectAll("div.class1").data([4,5,61,3])` <br>
 That line **binds** the array [4,5,61,3] to `div` elements with `class1`. A very **critical** thing to understand and remember here, is that those are rarely equal to each other in length. In some cases we have more divs than data points or vice versa.
