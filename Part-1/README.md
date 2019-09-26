@@ -53,10 +53,10 @@ SVG allows for simple mathematical representation of images. It provides options
 ```
 An `<svg>` element can be styled with CSS to have differ- ent borders and backgrounds. Or use D3 to style it! 
 
-#### SVG: <text>
+#### SVG: `<text>` element
 svg allows for text as well as shapes. It's primarily used for **labels**.
 
-#### SVG: <g>
+#### SVG: `<g>` element
 The `<g></g>` element doesn't exsit as a bounded space. Instead, it's used a logical grouping of elements. Let's say you want a number of shapes to be associated with each other or a shape and its label, you can place them inside a `<g>` element.
 
 ```html
