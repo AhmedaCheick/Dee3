@@ -34,10 +34,15 @@ That line **binds** the array [4,5,61,3] to `div` elements with `class1`. A very
 <br>
 ### The DOM
 A web page is structured according to the DOM. It defines a set of nested elements. <br>
-Three categories of information about each **element** determine its behavior and appearance: *styles*, *attributes*, and *properties*.
+Three categories of information about each **element** determine its behavior and appearance: *styles*, *attributes*, and *properties*. This how **D3** gets access to each one:
 
 ```javascript
 d3.select("#someDiv").style("border", "5px darkgray dashed");
 d3.select("#someDiv").attr("id", "newID");
 d3.select("#someCheckbox").property("checked", true);
 ```
+
+`html("content")` Gets or sets the inner HTML of selected element.
+
+### SVG
+SVG allows for simple mathematical representation of images. It provides options to draw different shapes such as Lines, Rectangles, Circles, Ellipses, etc. Hence, designing visualizations with SVG gives you more power and flexibility.
