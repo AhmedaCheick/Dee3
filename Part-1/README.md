@@ -118,5 +118,5 @@ The error variable is optional.
 ```javascript
 d3.json("data/tweets.json",function(data) {console.log(data)});
 ```
-Both `d3.csv` and `d3.json` are asynchronous, and will return after the request to open the file and not after processing the file. 
+Both `d3.csv` and `d3.json` are asynchronous, and will return after the request to open the file and not after processing the file. **if you call functions that require the data, they will fail!**
 
