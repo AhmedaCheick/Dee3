@@ -55,7 +55,7 @@
 
             d3.select("svg")
                 .append("text")
-                .attr("x", 350)
+                .attr("x", 320)
                 .attr("y", 400)
                 .style("opacity",0)
                 .text("What? I can't see!")
@@ -71,14 +71,13 @@
             d3.select("#redText").transition().delay(3000).attr("x",50);
             // blue responds
             d3.select("#blueText").transition().delay(4000).text("Oh..Hi back!");
+            d3.select("#blueText").transition().delay(6000).text("");
             // awkward 
-            d3.select("#blueText").transition().delay(5000).text("This is awkward, Adios!!")
-
-            // red goes back
-
-            // hi, what?, Hi, Oh, well hi back!, This' awkward bye!!
-            // d3.selectAll("circle").transition().delay(1000).style("opacity", 1);
-            // d3.selectAll("circle").transition().delay(3000).style("opacity", .75);
+            d3.select("#blueText").transition().delay(8000).text("This is boring, Adios!!");
+            d3.select("#blueText").transition().delay(10000).text("");
+    
+            // transition for blue circle
+            d3.select("#mrLight").transition().delay(9000).attr("cy", 700);
         </script>
 </body>
 

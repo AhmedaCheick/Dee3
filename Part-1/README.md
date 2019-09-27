@@ -101,5 +101,6 @@ You use the function `.data()` to bind **each** element in your selection (`.sel
 #### `transition()` & `delay()`
 `transition` method indicates that you don’t want your change to be instantaneous. By chaining it with the `.delay()` method, you indicate how many milliseconds to wait before implementing the style or attribute changes that appear in the chain after that.
 ```javascript
-d3.selectAll("circle").transition().duration(2000).attr("cy", 200);
+d3.selectAll("circle").transition().delay(2000).attr("cy", 200);
 ```
+Or you can also chain `transition` to `duration()` telling your browser how much time (in milliseconds) you want your changes to take effect.
