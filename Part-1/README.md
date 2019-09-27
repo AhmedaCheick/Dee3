@@ -118,5 +118,28 @@ The error variable is optional.
 ```javascript
 d3.json("data/tweets.json",function(data) {console.log(data)});
 ```
-Both `d3.csv` and `d3.json` are asynchronous, and will return after the request to open the file and not after processing the file. **if you call functions that require the data, they will fail!**
+Both `d3.csv` and `d3.json` are asynchronous, and will return after the request to open the file and not after processing the file. **if you call functions that require the data, they will fail!** <br>
+<br>
+Also, remember when you load the data, it will often be in a string format regardless of its previous data type.
 
+#### `d3.scale()`
+We use `.scale()` to normalize our data. `d3.scale().linear()` makes a direct relationship between your actual data and a new range of values. This done by setting a **domain** and a **range** which accepts arrays. <br>
+`d3.time.scale()` provides a linear scale that’s designed to deal with date datatypes. There are less known scalers such as `d3.scale().log() d3.scale().pow(), d3.scale().ordinal` among others.
+![scale](Images/3.png)
+
+#### `d3.scale().quantile()`
+Splits the data array into equal 'bins'. The number of parts and their labels are determined by the `.range()`. You will simply need to pass in your data through `.domain()` and it will sort it then splits according to `.range()`
+```javascript
+d3.scale.quantile().domain(sampleArray).range([0,1,2]);
+```
+
+#### `d3.min()`
+```javascript
+d3.min(data, function (el) {return +el.population});
+```
+Returns the minimum value in the data. In this case we passed the cities object and it returned the min value in population.
+#### `d3.max()`
+```javascript
+d3.max(data, function (el) {return +el.population});
+```
+Returns the maximum value in the same data.
