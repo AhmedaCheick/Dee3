@@ -26,38 +26,59 @@
                 .attr("x2", 400)
                 .attr("y2", 400)
                 .style("stroke", "black")
-                .style("stroke-width", "2px");
-            // Text
+                .style("stroke-width", "1px");
+
+            // Red circle section 
             d3.select("svg")
                 .append("text")
-                .attr("x", 20)
+                .attr("x", 25)
                 .attr("y", 20)
-                .text("I said Hi!");
+                .text("Hi!")
+                .attr("id", "redText");
 
             d3.select("svg")
                 .append("circle")
                 .attr("r", 20)
                 .attr("cx", 20)
                 .attr("cy", 20)
-                .style("fill", "red");
-            // append a circle 
+                .style("fill", "red")
+                .attr("id", "red");
+            
+            // blue circle section 
             d3.select("svg")
                 .append("circle")
                 .attr("r", 100)
                 .attr("cx", 400)
                 .attr("cy", 400)
-                .style("fill", "lightblue");
-            // append text 
+                .style("fill", "lightblue")
+                .attr("id", "mrLight");
+
             d3.select("svg")
                 .append("text")
-                .attr("x", 400)
+                .attr("x", 350)
                 .attr("y", 400)
-                .text("What?");
+                .style("opacity",0)
+                .text("What? I can't see!")
+                .attr("id", "blueText");
+              
+        
+            // after 2000 miliseconds do the following
+            // d3.selectAll("circle").transition().duration(2000).attr("cy", 200);
+     
+            // Blue circle confused 
+            d3.select("#blueText").transition().delay(1500).style("opacity", 1);
+            // red circle moves aside 
+            d3.select("#redText").transition().delay(3000).attr("x",50);
+            // blue responds
+            d3.select("#blueText").transition().delay(4000).text("Oh..Hi back!");
+            // awkward 
+            d3.select("#blueText").transition().delay(5000).text("This is awkward, Adios!!")
 
+            // red goes back
 
-            d3.selectAll("circle").transition().duration(2000).attr("cy", 200);
-            d3.selectAll("circle").transition().delay(1000).style("opacity", 1);
-            d3.selectAll("circle").transition().delay(3000).style("opacity", .75);
+            // hi, what?, Hi, Oh, well hi back!, This' awkward bye!!
+            // d3.selectAll("circle").transition().delay(1000).style("opacity", 1);
+            // d3.selectAll("circle").transition().delay(3000).style("opacity", .75);
         </script>
 </body>
 
