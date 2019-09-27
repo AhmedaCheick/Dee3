@@ -44,7 +44,7 @@ d3.select("#someCheckbox").property("checked", true);
 
 `html("content")` Gets or sets the inner HTML of selected element.
 
-### SVG
+### 02/03 - SVG
 SVG allows for simple mathematical representation of images. It provides options to draw different shapes such as Lines, Rectangles, Circles, Ellipses, etc. Hence, designing visualizations with SVG gives you more power and flexibility.
 
 ```html
@@ -88,7 +88,7 @@ And this one below is closed due to the presence of `Z`.
      d="M 10,60 40,30 50,50 60,30 70,80Z" transform="translate(0,200)" />
 ```
 
-### Some CSS
+### 04 - Some more CSS
 We have showed how you can overwrite an entire class name by using `attr()`. But often a class is composed of multiple strings. We can edit those using `classed()`. It allows you to **append** or **remove** a class. <br>
 ```javascript
 d3.select("circle").classed("active", true);
@@ -98,7 +98,7 @@ This line appends a class "active" to the `circle` element.
 #### `.data()` 
 You use the function `.data()` to bind **each** element in your selection (`.select()`) to each element in your array. If you have more items in your array than elements on your page, you use `.enter()`. When you have less items in your array than your selection that's when you use `.exit()`. 
 
-#### `transition()` & `delay()`
+#### 06 - `transition()` & `delay()`
 `transition` method indicates that you don’t want your change to be instantaneous. By chaining it with the `.delay()` method, you indicate how many milliseconds to wait before implementing the style or attribute changes that appear in the chain after that.
 ```javascript
 d3.selectAll("circle").transition().delay(2000).attr("cy", 200);
