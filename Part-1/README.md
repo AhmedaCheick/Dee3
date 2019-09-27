@@ -108,3 +108,5 @@ Or you can also chain `transition` to `duration()` telling your browser how much
 
 ### Working with D3
 ![d3 life cycle](Images/2.png)
+
+D3 has five functions for loading data: `d3.text(), d3.xml(), d3.csv(), d3.json() and d3.html()`
