@@ -109,4 +109,14 @@ Or you can also chain `transition` to `duration()` telling your browser how much
 ### Working with D3
 ![d3 life cycle](Images/2.png)
 
-D3 has five functions for loading data: `d3.text(), d3.xml(), d3.csv(), d3.json() and d3.html()`
+D3 has five functions for loading data: `d3.text(), d3.xml(), d3.csv(), d3.json() and d3.html()`. <br>
+Both d3.csv() and d3.json() both have the same format: you declare a **path** and a callback function.
+```javascript
+d3.csv("data/cities.csv",function(error,data) {console.log(error,data)});
+```
+The error variable is optional.
+```javascript
+d3.json("data/tweets.json",function(data) {console.log(data)});
+```
+Both `d3.csv` and `d3.json` are asynchronous, and will return after the request to open the file and not after processing the file. 
+
