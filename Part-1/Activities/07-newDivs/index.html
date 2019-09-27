@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js" type="text/JavaScript"></script>
+  </head>
+  <body>
+<!-- body has only the script -->
+    <script>
+
+    // load the data then call the function to append
+    //  new divs for each 
+      d3.csv("../data/cities.csv", data => dataViz(data));
+
+      function dataViz(incomingData) {
+    	// select the body and divs (empty selection here)
+        d3.select("body").selectAll("div.cities")
+          .data(incomingData)
+        // how to respond when there's more data
+          .enter()
+        // create the divs that didn't exist
+          .append("div")
+            // givem some attributes 
+            .attr("class","cities")
+            // populate the html (content of the div)
+            .html(d => d.label);
+        
+      }
+    </script>
+  </body>
+</html>

@@ -143,3 +143,19 @@ Returns the minimum value in the data. In this case we passed the cities object 
 d3.max(data, function (el) {return +el.population});
 ```
 Returns the maximum value in the same data.
+
+#### `d3.extent()`
+Returns both min and max values in the form of an array.
+```javascript
+d3.extent(data, function (el) {return +el.population});
+```
+#### Notes on Selections
+We select one or more elements of the page. `.select()` for one and `selectAll()` for all similar elements. Often the selected element doesn't exist, this is called *empty selection*. We use `.enter()` to create the **new** element in the page. We can chain these two but note that a subselection **won't** create a parent element. You will need to create one using `.append()`!
+
+#### `.data()`
+This is where you associate each element in your selection to one item of your data.
+<br>
+You need to use `.enter()` if your data have more items than the elements selected and `.exit()` if it's less. Neither needs to be called if the two are equal.
+
+#### `.html()`
+Sets the content of your selected html.
