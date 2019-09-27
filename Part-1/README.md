@@ -7,7 +7,7 @@ It gives you the tools to create high-performance data dashboards and sophistica
 
 However, It’s a much longer process than using dedicated charting libraries, but the D3 process is also its **strength**.
 
-### Selecting and Binding
+### 01 - Selecting and Binding
 D3 is all about these two. *Selection* is the grouping of elements, whether graphics or traditional divs. <br>
 <br>
 *Selecting*
