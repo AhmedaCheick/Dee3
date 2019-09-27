@@ -104,3 +104,7 @@ You use the function `.data()` to bind **each** element in your selection (`.sel
 d3.selectAll("circle").transition().delay(2000).attr("cy", 200);
 ```
 Or you can also chain `transition` to `duration()` telling your browser how much time (in milliseconds) you want your changes to take effect.
+
+
+### Working with D3
+![d3 life cycle](Images/2.png)
