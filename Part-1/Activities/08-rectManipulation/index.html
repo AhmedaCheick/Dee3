@@ -9,15 +9,15 @@
     <svg style="width:500px;height:500px;">
     </svg>
     <script>
-        // rectangles overlaying
-        d3.select("svg")
-            .selectAll("rect")
-            .data([15, 50, 22, 8, 100, 10])
-            .enter()
-            .append("rect")
-            .attr("width", 10)
-            .attr("height", d => d)
-            .style("opacity", .25);
+        // // rectangles overlaying
+        // d3.select("svg")
+        //     .selectAll("rect")
+        //     .data([15, 50, 22, 8, 100, 10])
+        //     .enter()
+        //     .append("rect")
+        //     .attr("width", 10)
+        //     .attr("height", d => d)
+        //     .style("opacity", .25);
 
         // offset the rectangles
         d3.select("svg")
@@ -28,7 +28,7 @@
             .attr("width", 10)
             .attr("height", d => d)
             .style("opacity", .25)
-            .attr("x", (d, i) => i * 10);
+            .attr("x", (d, i) => i * 100);
     </script>
 </body>
 

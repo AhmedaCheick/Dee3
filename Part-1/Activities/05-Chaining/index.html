@@ -17,30 +17,30 @@
         // data array 
       var someData = ["filler", "filler", "filler", "filler"];
       
-    // //    select the body and every div in the body
-    //   d3.select("body").selectAll("div")
-    // // bind the data
-    //     .data(someData)
-    //     .enter()
-    //     .append("div")
-    //       .html("Wow")
-    //     // append a span for every div
-    //     .append("span")
-    //     // add more text in the span' html
-    //       .html("Even More Wow")
-    //       .style("font-weight", "900");
-
-    //   array of some numbers 
-      var someNumbers = [17, 82, 9, 500, 40];
-      
-      var smallerNumbers = someNumbers
-        .filter(function(el) {return el <= 40});
-      
+    //    select the body and every div in the body
       d3.select("body").selectAll("div")
-        .data(smallerNumbers)
+    // bind the data
+        .data(someData) // binding 
         .enter()
         .append("div")
-          .html(function (d) {return d;});
+          .html("Wow")
+        // // append a span for every div
+        .append("span")
+        // add more text in the span' html
+          .html("Even More Wow")
+          .style("font-weight", "900");
+
+    //   array of some numbers 
+      // var someNumbers = [17, 82, 9, 500, 40];
+      
+      // var smallerNumbers = someNumbers
+      //   .filter(function(el) {return el <= 40});
+      
+      // d3.select("body").selectAll("div")
+      //   .data(smallerNumbers)
+      //   .enter()
+      //   .append("div")
+      //     .html(function (d) {return d;});
 
     </script>
   </body>

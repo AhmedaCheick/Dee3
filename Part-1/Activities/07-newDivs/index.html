@@ -12,6 +12,7 @@
       d3.csv("../data/cities.csv", data => dataViz(data));
 
       function dataViz(incomingData) {
+       
     	// select the body and divs (empty selection here)
         d3.select("body").selectAll("div.cities")
           .data(incomingData)

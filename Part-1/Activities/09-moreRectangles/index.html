@@ -11,38 +11,38 @@
     <script>
         //  Part 1
         // adding really bad rectangles
-        d3.select("svg")
-            .selectAll("rect")
-            .data([14, 68, 24500, 430, 19, 1000, 5555])
-            .enter()
-            .append("rect")
-            .attr("width", 10)
-            .attr("height", d => d)
-            .attr("x", (d, i) => i * 10)
-            .style("fill", "#FE9922")
-            .style("stroke", "#9A8B7A")
-            .style("stroke-width", "1px")
-            .attr("x", (d, i) => i * 10);
-
-
-        // // Part 2
-        // //  small fixes to the bad rectangles
-        // var yScale = d3.scaleLinear()
-        //     .domain([0, 24500])
-        //     .range([0, 100]);
-
         // d3.select("svg")
         //     .selectAll("rect")
         //     .data([14, 68, 24500, 430, 19, 1000, 5555])
         //     .enter()
         //     .append("rect")
-        //     .attr("x", (d, i) => i * 10)
         //     .attr("width", 10)
-        //     .attr("height", d => yScale(d))
-        //     .attr("y", d => 100 - yScale(d))
+        //     .attr("height", d => d)
+        //     .attr("x", (d, i) => i * 10)
         //     .style("fill", "#FE9922")
         //     .style("stroke", "#9A8B7A")
-        //     .style("stroke-width", "1px");
+        //     .style("stroke-width", "1px")
+        //     .attr("x", (d, i) => i * 10);
+
+
+        // Part 2
+        //  small fixes to the bad rectangles
+        var yScale = d3.scaleLinear()
+            .domain([0, 24500])
+            .range([0, 100]);
+
+        d3.select("svg")
+            .selectAll("rect")
+            .data([14, 68, 24500, 430, 19, 1000, 5555])
+            .enter()
+            .append("rect")
+            .attr("x", (d, i) => i * 10)
+            .attr("width", 10)
+            .attr("height", d => yScale(d))
+            .attr("y", d => 100 - yScale(d))
+            .style("fill", "#FE9922")
+            .style("stroke", "#9A8B7A")
+            .style("stroke-width", "1px");
         
 
         // // Part 3
